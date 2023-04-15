@@ -15,6 +15,23 @@ import * as monaco from "monaco-editor";
 export const lspSceneName = { value: "" };
 
 function App() {
+
+  useEffect(() => {
+    const token = (localStorage.getItem("token") ?? "").replaceAll("\"", "");
+    const accessToken = `Bearer ${token}`;
+    axios.get("/api/test/isAuth", { headers: { Authorization: accessToken } }).then(resp => {
+      const data = resp.data;
+      if (data !== "Yes") {
+        alert("登录失效，正在返回登录页面");
+        location.replace("/user/log-in");
+      }
+    }).catch(e => {
+      console.log(e);
+      alert("登录失效，正在返回登录页面");
+      location.replace("/user/log-in");
+    });
+  }, []);
+
   useEffect(() => {
     logger.info("Welcome to WebGAL live editor!");
 
