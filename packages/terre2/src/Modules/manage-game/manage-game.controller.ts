@@ -126,7 +126,7 @@ export class ManageGameController {
 
   @Get('getGameConfig/*')
   async getGameConfig(@Req() request: Request) {
-    // 截取出游戏名称
+    // 截取出互动阅读名称
     const gameNameFromUrl: string = request.url.split('getGameConfig/')[1];
     const gameName = decodeURI(gameNameFromUrl);
     const configFilePath = this.webgalFs.getPathFromRoot(

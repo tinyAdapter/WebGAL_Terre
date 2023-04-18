@@ -201,11 +201,11 @@ export const sentenceEditorConfig: ISentenceEditorConfig[] = [
   },
   {
     type: commandType.end,
-    title: "结束游戏",
+    title: "结束互动阅读",
     initialText: "end;",
     component: End,
     icon: <Logout theme="multi-color" size="24" fill={["#333", "#2F88FF", "#FFF", "#43CCF8"]} />,
-    descText:'结束当前游戏并回到标题画面'
+    descText:'结束当前互动阅读并回到标题画面'
   },
   {
     type: commandType.comment,

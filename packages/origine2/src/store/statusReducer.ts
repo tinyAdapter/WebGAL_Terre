@@ -64,7 +64,7 @@ const statusSlice = createSlice({
       state.dashboard.showDashBoard = action.payload;
     },
     /**
-     * 设置正在编辑的游戏
+     * 设置正在编辑的互动阅读
      * @param state
      * @param action
      */

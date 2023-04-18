@@ -2,7 +2,7 @@ POST http://localhost/api/manageGame/mkdir HTTP/1.1
 Content-Type: application/json
 
 {
-  "source": "public/games/新的游戏/game/bgm",
+  "source": "public/games/新的互动阅读/game/bgm",
   "name": "123"
 }
 
@@ -11,7 +11,7 @@ POST http://localhost/api/manageGame/rename HTTP/1.1
 Content-Type: application/json
 
 {
-  "source": "public/games/新的游戏/game/bgm/123",
+  "source": "public/games/新的互动阅读/game/bgm/123",
   "newName": "456"
 }
 
@@ -20,5 +20,5 @@ POST http://localhost/api/manageGame/delete HTTP/1.1
 Content-Type: application/json
 
 {
-"source": "public/games/新的游戏/game/bgm/456"
+"source": "public/games/新的互动阅读/game/bgm/456"
 }

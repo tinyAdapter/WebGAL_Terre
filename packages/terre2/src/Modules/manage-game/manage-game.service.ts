@@ -10,18 +10,18 @@ export class ManageGameService {
   ) {}
 
   /**
-   * 打开游戏资源文件夹
+   * 打开互动阅读资源文件夹
    */
   async openAssetsDictionary(gameName: string) {
     const path = this.webgalFs.getPathFromRoot(`public/games/${gameName}/game`);
     await _open(path);
   }
   /**
-   * 从模板创建游戏
+   * 从模板创建互动阅读
    * @param gameName
    */
   async createGame(gameName: string): Promise<boolean> {
-    // 检查是否存在这个游戏
+    // 检查是否存在这个互动阅读
     const checkDir = await this.webgalFs.getDirInfo(
       this.webgalFs.getPathFromRoot(`/public/games`),
     );
@@ -49,19 +49,19 @@ export class ManageGameService {
   }
 
   /**
-   * 导出游戏
-   * @param gameName 游戏名称
+   * 导出互动阅读
+   * @param gameName 互动阅读名称
    * @param ejectPlatform 导出平台
    */
   async exportGame(
     gameName: string,
     ejectPlatform: 'web' | 'electron-windows',
   ) {
-    // 根据 GameName 找到游戏所在目录
+    // 根据 GameName 找到互动阅读所在目录
     const gameDir = this.webgalFs.getPathFromRoot(
       `/public/Games/${gameName}/game/`,
     );
-    // 检查是否存在这个游戏
+    // 检查是否存在这个互动阅读
     const checkDir = await this.webgalFs.getDirInfo(
       this.webgalFs.getPathFromRoot(`/Exported_Games`),
     );
@@ -76,11 +76,11 @@ export class ManageGameService {
       `/Exported_Games/${gameName}`,
     );
     if (!isThisGameExist) {
-      // 创建游戏导出目录
+      // 创建互动阅读导出目录
       await this.webgalFs.mkdir(exportDir, '');
     }
 
-    // 将游戏复制到导出目录，并附加对应的模板
+    // 将互动阅读复制到导出目录，并附加对应的模板
     if (ejectPlatform === 'electron-windows') {
       const electronExportDir = this.webgalFs.getPath(
         `${exportDir}/electron-windows`,

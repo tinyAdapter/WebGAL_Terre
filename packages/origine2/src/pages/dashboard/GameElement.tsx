@@ -21,7 +21,7 @@ export default function GameElement(props: IGameElementProps) {
   const isShowDialog = useValue(false);
   const dialogContentProps = {
     type: DialogType.normal,
-    title: "删除游戏",
+    title: "删除互动阅读",
     subText: `是否要删除“${props.gameName}”`
   };
 

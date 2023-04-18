@@ -7,8 +7,8 @@
 ```text
 需要在打包后保留的：
 assets: 用于存储一些上传的临时文件、WebGAL 的相关模板
-Exported_Games: 用于存储保存的游戏
-public: 用于存储编辑器前端网页、具体的游戏文件
+Exported_Games: 用于存储保存的互动阅读
+public: 用于存储编辑器前端网页、具体的互动阅读文件
 README.md: 自述文档
 LICENSE: 许可证
 

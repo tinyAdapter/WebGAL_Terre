@@ -10,7 +10,7 @@ export function GamePreview(props: IGamePreviewProps) {
   const dispatch = useDispatch();
   if (props.gameName === "") {
     return <div className={styles.noneChecked}>
-      当前没有游戏被选中
+      当前没有互动阅读被选中
     </div>;
   }
 
@@ -22,7 +22,7 @@ export function GamePreview(props: IGamePreviewProps) {
   return <div className={styles.preview_main}>
     <div className={styles.preview_title}>
       <span className={styles.preview_title_text}>{props.gameName}</span>
-      <span onClick={() => enterEditor(props.gameName)} className={styles.editGameButton}>编辑游戏</span>
+      <span onClick={() => enterEditor(props.gameName)} className={styles.editGameButton}>编辑互动阅读</span>
     </div>
     {/* eslint-disable-next-line react/iframe-missing-sandbox */}
     <iframe id="gamePreviewIframe" frameBorder="0" className={styles.previewWindow} src={`/games/${props.gameName}`} />

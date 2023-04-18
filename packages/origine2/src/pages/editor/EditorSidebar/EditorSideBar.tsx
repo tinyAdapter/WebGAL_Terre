@@ -23,7 +23,7 @@ export default function EditorSideBar() {
       {state.showPreview && <div className={styles.preview_container}>
         <div className={styles.preview_top_title_container}>
           <div className={styles.preview_title}>
-            游戏预览
+            互动阅读预览
           </div>
           <div onClick={()=>{
             // @ts-ignore

@@ -21,9 +21,9 @@ export default function DashBoard() {
 
   const messageRef = useRef<TestRefRef>(null);
 
-  // 文件目录信息（游戏名为名称的游戏目录）
+  // 文件目录信息（互动阅读名为名称的互动阅读目录）
   const dirInfo = useValue<Array<string>>([]);
-  // 当前选中的游戏
+  // 当前选中的互动阅读
   const currentGame = useValue<string>("");
 
   async function getDirInfo() {
@@ -46,7 +46,7 @@ export default function DashBoard() {
       const gameList = (response as Array<IFileInfo>)
         .filter(e => e.isDir)
         .map(e => e.name);
-      logger.info("返回的游戏列表", gameList);
+      logger.info("返回的互动阅读列表", gameList);
       dirInfo.set(gameList);
     });
   }
@@ -60,14 +60,14 @@ export default function DashBoard() {
   return <>
     { isDashboardShow && (<div className={styles.dashboard_container}>
       <div className={styles.topBar}>
-        WebGAL Origine
+        WebVNR Origine
       </div>
       <div className={styles.dashboard_main}>
         <Message ref={messageRef} />
         <Sidebar onDeleteGame={()=>{refreashDashboard();setCurrent('');}} createGame={createGame} setCurrentGame={setCurrent} currentSetGame={currentGame.value}
           gameList={dirInfo.value} />
         <GamePreview gameName={currentGame.value} />
-        {/* <PrimaryButton onClick={createGame}>测试新建游戏</PrimaryButton> */}
+        {/* <PrimaryButton onClick={createGame}>测试新建互动阅读</PrimaryButton> */}
       </div>
     </div>)}
   </>;

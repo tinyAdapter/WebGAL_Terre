@@ -119,7 +119,7 @@ export default function ChooseFile(props: IChooseFile) {
 
 /**
  * 请求目录内文件的函数
- * @param currentGameName 游戏名
+ * @param currentGameName 互动阅读名
  * @param childDir 目录
  * @param extName 拓展名，要加.
  */

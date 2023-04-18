@@ -18,6 +18,6 @@ export default function Comment(props: ISentenceEditorProps) {
       onBlur={submit}
       className={styles.sayInput}
       placeholder="注释"
-    />注释仅在编辑时可见，游戏中不会执行
+    />注释仅在编辑时可见，互动阅读中不会执行
   </div>;
 }

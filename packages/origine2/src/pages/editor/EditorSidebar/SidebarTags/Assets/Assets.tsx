@@ -153,7 +153,7 @@ export default function Assets() {
       <div className={assetsStyles.assetsHead}>
         <div className={styles.sidebar_tag_title}>资源管理</div>
         <div className={styles.open_assets} onClick={open_assets}>
-          打开此游戏的资源文件夹
+          打开此互动阅读的资源文件夹
         </div>
       </div>
       <div className={assetsStyles.controlHead}>

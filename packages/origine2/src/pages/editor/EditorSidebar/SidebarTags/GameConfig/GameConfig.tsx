@@ -18,7 +18,7 @@ interface IGameConfig {
 export default function GameConfig() {
   const state = useSelector((state: RootState) => state.status.editor);
 
-  // 拿到游戏配置
+  // 拿到互动阅读配置
   const gameConfig = useValue<IGameConfig>({ gameName: "", titleBgm: "", titleBackground: "", gameKey: "" });
   const getGameConfig = () => {
     axios
@@ -81,15 +81,15 @@ export default function GameConfig() {
 
   return (
     <div>
-      <div className={styles.sidebar_tag_title}>游戏配置</div>
+      <div className={styles.sidebar_tag_title}>互动阅读配置</div>
       <div>
         <div className={styles.sidebar_gameconfig_container}>
-          <div className={styles.sidebar_gameconfig_title}>游戏名称</div>
+          <div className={styles.sidebar_gameconfig_title}>互动阅读名称</div>
           <GameConfigEditor key="gameName" value={gameConfig.value.gameName}
             onChange={(e: string) => updateGameConfig("gameName", e)} />
         </div>
         <div className={styles.sidebar_gameconfig_container}>
-          <div className={styles.sidebar_gameconfig_title}>游戏识别码</div>
+          <div className={styles.sidebar_gameconfig_title}>互动阅读识别码</div>
           <GameConfigEditor key="gameKey" value={gameConfig.value.gameKey}
             onChange={(e: string) => updateGameConfig("gameKey", e)} />
         </div>

@@ -21,7 +21,7 @@ export default function MainArea() {
       const socket = new WebSocket(wsUrl);
       socket.onopen = () => {
         console.log('socket已连接');
-        socket.send('WebGAL Origine 已和 Terre 建立连接');
+        socket.send('WebVNR Origine 已和 Terre 建立连接');
       };
       socket.onmessage = e => {
         console.log('收到信息', e.data);

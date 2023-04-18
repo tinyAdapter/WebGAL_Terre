@@ -15,7 +15,7 @@ interface ISidebarProps {
 export default function Sidebar(props: ISidebarProps) {
 
   const [showCreateGameCallout, setShowCreateGameCallout] = useState(false);
-  const [newGameName, setNewGameName] = useState("新的游戏");
+  const [newGameName, setNewGameName] = useState("新的互动阅读");
 
   const showGameList = props.gameList.map(e => {
     const checked = props.currentSetGame === e;
@@ -31,11 +31,11 @@ export default function Sidebar(props: ISidebarProps) {
 
   return <div className={styles.sidebar_main}>
     <div className={styles.sidebar_top}>
-      <span className={styles.sidebar_top_title}>游戏列表</span>
+      <span className={styles.sidebar_top_title}>互动阅读列表</span>
       { /* @ts-ignore} */}
       <span id="new-game-button" onClick={() => {
         setShowCreateGameCallout(!showCreateGameCallout);
-      }} className={styles.createGameButton}>新建游戏</span>
+      }} className={styles.createGameButton}>新建互动阅读</span>
       {showCreateGameCallout && <Callout
         className={styles.callout}
         ariaLabelledBy="createNewSceneCallout"
@@ -50,12 +50,12 @@ export default function Sidebar(props: ISidebarProps) {
         style={{ width: "300px", padding: "5px 10px 5px 10px" }}
       >
         <Text block variant="xLarge" className={styles.title}>
-          创建新游戏
+          创建新互动阅读
         </Text>
         <div>
           <TextField onChange={(event, newValue) => {
             setNewGameName(newValue ?? "");
-          }} defaultValue="新的游戏" label="新游戏名" />
+          }} defaultValue="新的互动阅读" label="新互动阅读名" />
         </div>
         <div style={{ display: "flex", justifyContent: "center", padding: "5px 0 5px 0" }}>
           <PrimaryButton text="创建" onClick={createNewGame} allowDisabledFocus />

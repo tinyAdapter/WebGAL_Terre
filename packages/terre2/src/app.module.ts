@@ -11,7 +11,7 @@ import { LspModule } from './Modules/lsp/lsp.module';
     // 代码提示
     LspModule,
     ManageGameModule,
-    // 静态文件服务：游戏与编辑器静态资源文件
+    // 静态文件服务：互动阅读与编辑器静态资源文件
     ServeStaticModule.forRoot({
       rootPath: join(process.cwd(), 'public'),
       serveRoot: '/',

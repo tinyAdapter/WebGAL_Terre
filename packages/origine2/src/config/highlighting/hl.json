@@ -1,6 +1,6 @@
 {
   "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
-  "name": "WebGAL Script",
+  "name": "WebVNR Script",
   "patterns": [
     {
       "include": "#comment-line"

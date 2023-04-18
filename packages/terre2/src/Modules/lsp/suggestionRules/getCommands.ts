@@ -18,7 +18,7 @@ const commandSuggestions: CompletionItem[] = [
     label: 'intro',
     kind: CompletionItemKind.Function,
     documentation: `黑屏独白
-在许多游戏中，会以黑屏显示一些文字，用来引入主题或表现人物的心理活动。你可以使用 intro 命令来演出独白。
+在许多互动阅读中，会以黑屏显示一些文字，用来引入主题或表现人物的心理活动。你可以使用 intro 命令来演出独白。
 独白的分拆以分隔符(|)来分割，也就是说，每一个 | 代表一个换行。
 intro:回忆不需要适合的剧本，|反正一说出口，|都成了戏言。;`,
     detail: `command intro:<text> [|<text of line 2>] ...;`,
@@ -44,7 +44,7 @@ changeFigure:testFigure03.png -left -next;`,
     label: 'miniAvatar',
     kind: CompletionItemKind.Function,
     documentation: `放置小头像
-很多游戏可以在文本框的左下角放置小头像，以下是在本引擎中使用的语法
+很多互动阅读可以在文本框的左下角放置小头像，以下是在本引擎中使用的语法
 miniAvatar:minipic_test.png;显示
 miniAvatar:none;关闭`,
     detail: `command miniAvatar:<fileName>;`,
@@ -81,7 +81,7 @@ choose:叫住她:Chapter-2.txt|回家:Chapter-3.txt;`,
   {
     label: 'end',
     kind: CompletionItemKind.Function,
-    documentation: `结束游戏并返回到标题
+    documentation: `结束互动阅读并返回到标题
 end;`,
     detail: `command end;`,
     insertText: 'end;',

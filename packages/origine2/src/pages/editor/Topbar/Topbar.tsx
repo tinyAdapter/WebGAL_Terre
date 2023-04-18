@@ -30,7 +30,7 @@ export default function TopBar() {
 
     {
       key: "release",
-      text: "导出游戏",
+      text: "导出互动阅读",
       cacheKey: "release", // changing this key will invalidate this item's cache
       iconProps: { iconName: "PublishContent" },
       subMenuProps: {
@@ -58,7 +58,7 @@ export default function TopBar() {
   return <div className={styles.editor_topbar}>
     <a href="/" className={styles.home_btn}>
       <LeftSmall theme="outline" size="24" fill="#005caf" />
-      <div className={styles.editor_title}>WebGAL Origine</div>
+      <div className={styles.editor_title}>WebVNR Origine</div>
     </a>
 
     <div className={styles.editor_editingGame}>正在编辑：<span style={{ fontWeight: "bold" }}>{editingGame}</span></div>
