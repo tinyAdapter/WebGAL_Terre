@@ -59,7 +59,7 @@ export function extractPathAfterPublic(path: string): string {
 
   if (publicIndex !== -1) {
     const slicedParts = parts.slice(publicIndex + 1);
-    return slicedParts.join("/");
+    return "/" + slicedParts.join("/");
   } else {
     return "";
   }
