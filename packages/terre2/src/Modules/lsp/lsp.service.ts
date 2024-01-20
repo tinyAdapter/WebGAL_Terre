@@ -2,10 +2,9 @@ import { ConsoleLogger, Injectable } from '@nestjs/common';
 import {
   CompletionParams,
   CompletionList,
-  TextDocument,
   CompletionItem,
-  TextDocuments,
 } from 'vscode-languageserver';
+import { TextDocument } from 'vscode-languageserver-textdocument';
 import { getCommands } from './suggestionRules/getCommands';
 import { getArgsKey } from './suggestionRules/getArgsKey';
 import { getKeywordsAndConstants } from './suggestionRules/getKeywordsAndConstants';
